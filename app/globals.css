@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --radius: 14px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-brand-ink font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    @apply bg-brand-red text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .mask-fade-right {
+    mask-image: linear-gradient(to right, black 80%, transparent 100%);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .bg-grid {
+    background-image: radial-gradient(rgba(10, 10, 10, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .glow-red::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #E11D2A, rgba(225, 29, 42, 0));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+/* Subtle interactive cursor ring */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #e11d2a;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.12s ease-out, opacity 0.2s ease;
+  opacity: 0;
+}
+.cursor-dot.active {
+  opacity: 0.65;
+}
+@media (pointer: coarse) {
+  .cursor-dot {
+    display: none;
+  }
+}
