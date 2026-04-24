@@ -1,15 +1,32 @@
 "use client";
 
 import * as React from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
-import { Footer } from "@/components/site/Footer";
-import { ScrollProgress } from "@/components/site/ScrollProgress";
-import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { Button } from "@/components/ui/Button";
 import type { SectionTheme, ServiceDetail } from "@/lib/services/types";
+
+const Footer = dynamic(
+  () => import("@/components/site/Footer").then((m) => ({ default: m.Footer })),
+  { ssr: false }
+);
+const ScrollProgress = dynamic(
+  () =>
+    import("@/components/site/ScrollProgress").then((m) => ({
+      default: m.ScrollProgress,
+    })),
+  { ssr: false }
+);
+const WhatsAppFab = dynamic(
+  () =>
+    import("@/components/site/WhatsAppFab").then((m) => ({
+      default: m.WhatsAppFab,
+    })),
+  { ssr: false }
+);
 
 type ThemeTokens = {
   accent: string;

@@ -1,14 +1,31 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/site/Navbar";
-import { Footer } from "@/components/site/Footer";
-import { ScrollProgress } from "@/components/site/ScrollProgress";
-import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import {
   ServiceShowcase,
   type ShowcaseItem,
 } from "@/components/service-pages/ServiceShowcase";
 import { accountingServices } from "@/lib/services/accounting";
+
+const Footer = dynamic(
+  () => import("@/components/site/Footer").then((m) => ({ default: m.Footer })),
+  { ssr: false }
+);
+const ScrollProgress = dynamic(
+  () =>
+    import("@/components/site/ScrollProgress").then((m) => ({
+      default: m.ScrollProgress,
+    })),
+  { ssr: false }
+);
+const WhatsAppFab = dynamic(
+  () =>
+    import("@/components/site/WhatsAppFab").then((m) => ({
+      default: m.WhatsAppFab,
+    })),
+  { ssr: false }
+);
 
 const items: ShowcaseItem[] = accountingServices.map((service) => ({
   icon: service.icon,
@@ -25,7 +42,7 @@ export function AccountingPreview() {
       <ScrollProgress />
       <Navbar />
 
-      <div className="pt-28 md:pt-32">
+      <div className="pt-20 md:pt-24">
         <ServiceShowcase
           theme="blue"
           eyebrow="Accounting services"
@@ -35,6 +52,9 @@ export function AccountingPreview() {
           intro="Five retainers that keep your finance back-office running on a predictable monthly rhythm."
           items={items}
           centered
+          showRibbon={false}
+          coloredTitle
+          variant="editorial"
         />
       </div>
 

@@ -1,13 +1,35 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/site/Navbar";
-import { Footer } from "@/components/site/Footer";
-import { ScrollProgress } from "@/components/site/ScrollProgress";
-import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactInfoCards } from "@/components/contact/ContactInfoCards";
-import { ContactForm } from "@/components/contact/ContactForm";
-import { OfficePanel } from "@/components/contact/OfficePanel";
-import { FAQStrip } from "@/components/contact/FAQStrip";
+
+const ContactForm = dynamic(() =>
+  import("@/components/contact/ContactForm").then((m) => ({ default: m.ContactForm }))
+);
+const OfficePanel = dynamic(() =>
+  import("@/components/contact/OfficePanel").then((m) => ({ default: m.OfficePanel }))
+);
+const FAQStrip = dynamic(() =>
+  import("@/components/contact/FAQStrip").then((m) => ({ default: m.FAQStrip }))
+);
+const Footer = dynamic(() =>
+  import("@/components/site/Footer").then((m) => ({ default: m.Footer }))
+);
+const ScrollProgress = dynamic(
+  () =>
+    import("@/components/site/ScrollProgress").then((m) => ({
+      default: m.ScrollProgress,
+    })),
+  { ssr: false }
+);
+const WhatsAppFab = dynamic(
+  () =>
+    import("@/components/site/WhatsAppFab").then((m) => ({
+      default: m.WhatsAppFab,
+    })),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: "Contact LN Associate — Ahmedabad Accounting & Tax Consultants",

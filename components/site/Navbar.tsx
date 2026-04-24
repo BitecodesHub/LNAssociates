@@ -162,7 +162,7 @@ export function Navbar() {
   };
   const handleLeave = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => setOpen(null), 220);
+    closeTimer.current = setTimeout(() => setOpen(null), 60);
   };
 
   return (
@@ -176,18 +176,24 @@ export function Navbar() {
     >
       {/* 3-col grid guarantees TRUE centering of middle capsule
           regardless of logo / CTA widths */}
-      <div className="container grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <div className="container grid grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-3 md:grid-cols-[1fr_auto_1fr] md:gap-4">
         {/* Left: Logo (wrapped in a matching capsule for consistent contrast) */}
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className={cn(
-            "justify-self-start rounded-full border border-black/5 bg-white/85 px-3 py-1.5 backdrop-blur-xl transition-all duration-300",
+            "justify-self-start rounded-full border border-black/5 bg-white/85 px-2.5 py-1 backdrop-blur-xl transition-all duration-300 md:px-3 md:py-1.5",
             scrolled ? "shadow-pill" : "shadow-sm"
           )}
         >
-          <Logo />
+          {/* Compact logo (no tagline) on mobile, full logo on md+ */}
+          <div className="md:hidden">
+            <Logo compact />
+          </div>
+          <div className="hidden md:block">
+            <Logo />
+          </div>
         </motion.div>
 
         {/* Center Capsule — always perfectly centered */}
@@ -230,7 +236,7 @@ export function Navbar() {
           </Link>
         </motion.nav>
 
-        {/* Placeholder so middle column stays truly centered on mobile */}
+        {/* Spacer column on mobile so the burger sits flush right */}
         <div className="md:hidden" aria-hidden />
 
         {/* Right: CTA */}
@@ -251,7 +257,10 @@ export function Navbar() {
         {/* Mobile trigger */}
         <button
           onClick={() => setMobileOpen((v) => !v)}
-          className="inline-flex h-11 w-11 items-center justify-self-end rounded-full border border-black/10 bg-white/80 backdrop-blur-xl md:hidden"
+          className={cn(
+            "inline-flex h-10 w-10 items-center justify-center justify-self-end rounded-full border border-black/10 bg-white/85 backdrop-blur-xl transition-all duration-300 md:hidden",
+            scrolled ? "shadow-pill" : "shadow-sm"
+          )}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
         >
@@ -388,28 +397,28 @@ function MegaDropdown({
         {isOpen && activeKey && (
           <motion.div
             key="panel"
-            initial={{ opacity: 0, y: 6, scale: 0.985, filter: "blur(6px)" }}
-            animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-            exit={{ opacity: 0, y: -4, scale: 0.99, filter: "blur(4px)" }}
+            initial={{ opacity: 0, y: 4, scale: 0.99 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -2, scale: 0.995 }}
             transition={{
-              duration: 0.34,
+              duration: 0.18,
               ease: [0.16, 1, 0.3, 1],
-              opacity: { duration: 0.22 },
+              opacity: { duration: 0.14 },
             }}
             className="container"
           >
             <motion.div
               layout
-              transition={{ layout: { duration: 0.38, ease: [0.22, 1, 0.36, 1] } }}
+              transition={{ layout: { duration: 0.22, ease: [0.22, 1, 0.36, 1] } }}
               className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-black/5 bg-white shadow-[0_30px_80px_-30px_rgba(10,10,10,0.25)]"
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={activeKey}
-                  initial={{ opacity: 0, y: 8 }}
+                  initial={{ opacity: 0, y: 4 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
-                  transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
+                  exit={{ opacity: 0, y: -2 }}
+                  transition={{ duration: 0.14, ease: [0.22, 1, 0.36, 1] }}
                 >
                   {activeKey === "acc" ? (
                     <MegaAccounting menu={accountingMenu} close={close} />
@@ -440,20 +449,20 @@ function MegaAccounting({
   return (
     <div className="grid grid-cols-12">
       {/* Featured */}
-      <div className="col-span-4 relative overflow-hidden bg-gradient-to-br from-brand-black to-[#1b1b1f] p-7 text-white">
-        <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(circle_at_80%_20%,rgba(255,255,255,.07),transparent_55%)]" />
-        <p className="relative text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-red">
+      <div className="col-span-4 relative overflow-hidden bg-gradient-to-br from-[#1D4ED8] to-[#1E3A8A] p-7 text-white">
+        <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(circle_at_80%_20%,rgba(255,255,255,.12),transparent_55%)]" />
+        <p className="relative text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80">
           Accounting Suite
         </p>
         <h3 className="relative mt-3 font-display text-2xl font-bold leading-tight">
           {menu.featured?.title}
         </h3>
-        <p className="relative mt-3 text-sm text-white/70">
+        <p className="relative mt-3 text-sm text-white/75">
           {menu.featured?.body}
         </p>
         <Button
           asChild
-          variant="primary"
+          variant="dark"
           size="md"
           className="relative mt-6"
         >
@@ -463,16 +472,16 @@ function MegaAccounting({
           </Link>
         </Button>
 
-        <div className="relative mt-8 grid grid-cols-3 gap-2 text-[11px] text-white/70">
-          <div className="rounded-xl border border-white/10 p-3">
+        <div className="relative mt-8 grid grid-cols-3 gap-2 text-[11px] text-white/75">
+          <div className="rounded-xl border border-white/15 p-3">
             <div className="font-display text-lg font-bold text-white">500+</div>
             Clients
           </div>
-          <div className="rounded-xl border border-white/10 p-3">
+          <div className="rounded-xl border border-white/15 p-3">
             <div className="font-display text-lg font-bold text-white">10+</div>
             Years
           </div>
-          <div className="rounded-xl border border-white/10 p-3">
+          <div className="rounded-xl border border-white/15 p-3">
             <div className="font-display text-lg font-bold text-white">4.8★</div>
             Google
           </div>
@@ -501,7 +510,7 @@ function MegaAccounting({
               },
             }}
           >
-            <p className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-red">
+            <p className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1D4ED8]">
               {g.heading}
             </p>
             <ul className="space-y-1">
@@ -510,10 +519,10 @@ function MegaAccounting({
                   <Link
                     href={item.href}
                     onClick={close}
-                    className="group flex items-start gap-3 rounded-xl px-2.5 py-2 transition-colors hover:bg-brand-soft"
+                    className="group flex items-start gap-3 rounded-xl px-2.5 py-2 transition-colors hover:bg-[#2563EB]/[0.06]"
                   >
                     {item.icon && (
-                      <div className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-brand-red/10 text-brand-red transition-colors group-hover:bg-brand-red group-hover:text-white">
+                      <div className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-[#2563EB]/10 text-[#1D4ED8] transition-colors group-hover:bg-[#2563EB] group-hover:text-white">
                         <item.icon className="h-4 w-4" />
                       </div>
                     )}
@@ -523,7 +532,7 @@ function MegaAccounting({
                           {item.title}
                         </span>
                         {item.tag && (
-                          <span className="rounded-full bg-brand-red/10 px-1.5 py-0.5 text-[9.5px] font-semibold text-brand-red">
+                          <span className="rounded-full bg-[#2563EB]/10 px-1.5 py-0.5 text-[9.5px] font-semibold text-[#1D4ED8]">
                             {item.tag}
                           </span>
                         )}
@@ -534,7 +543,7 @@ function MegaAccounting({
                         </p>
                       )}
                     </div>
-                    <ArrowUpRight className="mt-1 h-3.5 w-3.5 flex-none text-brand-muted opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-brand-red group-hover:-translate-y-0.5" />
+                    <ArrowUpRight className="mt-1 h-3.5 w-3.5 flex-none text-brand-muted opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-[#1D4ED8] group-hover:-translate-y-0.5" />
                   </Link>
                 </li>
               ))}
@@ -559,7 +568,7 @@ function MegaFinance({
 }) {
   return (
     <div className="grid grid-cols-12">
-      <div className="col-span-4 relative overflow-hidden bg-gradient-to-br from-brand-red to-brand-redDark p-7 text-white">
+      <div className="col-span-4 relative overflow-hidden bg-gradient-to-br from-[#059669] to-[#047857] p-7 text-white">
         <div className="pointer-events-none absolute inset-0 opacity-30 [background:radial-gradient(circle_at_90%_30%,rgba(255,255,255,.35),transparent_55%)]" />
         <p className="relative text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80">
           Funding Desk
@@ -605,10 +614,10 @@ function MegaFinance({
                 transition: { duration: 0.34, ease: [0.22, 1, 0.36, 1] },
               },
             }}
-            className="group flex items-start gap-3 rounded-2xl border border-transparent p-4 transition-all hover:border-black/5 hover:bg-brand-soft"
+            className="group flex items-start gap-3 rounded-2xl border border-transparent p-4 transition-all hover:border-black/5 hover:bg-[#059669]/[0.06]"
           >
             {item.icon && (
-              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-red/10 text-brand-red transition-colors group-hover:bg-brand-red group-hover:text-white">
+              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-[#059669]/10 text-[#047857] transition-colors group-hover:bg-[#059669] group-hover:text-white">
                 <item.icon className="h-5 w-5" />
               </div>
             )}
@@ -620,7 +629,7 @@ function MegaFinance({
                 <p className="text-[11.5px] text-brand-muted">{item.desc}</p>
               )}
             </div>
-            <ArrowUpRight className="h-4 w-4 flex-none text-brand-muted opacity-0 transition-all duration-300 group-hover:text-brand-red group-hover:opacity-100 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="h-4 w-4 flex-none text-brand-muted opacity-0 transition-all duration-300 group-hover:text-[#047857] group-hover:opacity-100 group-hover:-translate-y-0.5" />
           </motion.a>
         ))}
       </motion.div>
