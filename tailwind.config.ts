@@ -9,7 +9,12 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "1.5rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.25rem",
+        md: "1.5rem",
+        lg: "2rem",
+      },
       screens: { "2xl": "1360px" },
     },
     extend: {
@@ -50,11 +55,16 @@ const config: Config = {
           "0%": { transform: "scale(.9)", opacity: "0.6" },
           "100%": { transform: "scale(1.6)", opacity: "0" },
         },
+        plusDrift: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "44px 44px" },
+        },
       },
       animation: {
         shimmer: "shimmer 2.5s linear infinite",
         marquee: "marquee 32s linear infinite",
         pulseRing: "pulseRing 2s cubic-bezier(.4,0,.6,1) infinite",
+        plusDrift: "plusDrift 22s linear infinite",
       },
       backgroundImage: {
         "grid-dot":

@@ -10,25 +10,18 @@ const ContactForm = dynamic(() =>
 const OfficePanel = dynamic(() =>
   import("@/components/contact/OfficePanel").then((m) => ({ default: m.OfficePanel }))
 );
-const FAQStrip = dynamic(() =>
-  import("@/components/contact/FAQStrip").then((m) => ({ default: m.FAQStrip }))
-);
 const Footer = dynamic(() =>
   import("@/components/site/Footer").then((m) => ({ default: m.Footer }))
 );
-const ScrollProgress = dynamic(
-  () =>
-    import("@/components/site/ScrollProgress").then((m) => ({
-      default: m.ScrollProgress,
-    })),
-  { ssr: false }
+const ScrollProgress = dynamic(() =>
+  import("@/components/site/ScrollProgress").then((m) => ({
+    default: m.ScrollProgress,
+  }))
 );
-const WhatsAppFab = dynamic(
-  () =>
-    import("@/components/site/WhatsAppFab").then((m) => ({
-      default: m.WhatsAppFab,
-    })),
-  { ssr: false }
+const WhatsAppFab = dynamic(() =>
+  import("@/components/site/WhatsAppFab").then((m) => ({
+    default: m.WhatsAppFab,
+  }))
 );
 
 export const metadata: Metadata = {
@@ -47,7 +40,7 @@ export default function ContactPage() {
       <ContactHero />
       <ContactInfoCards />
 
-      <section className="py-14 md:py-20">
+      <section className="py-8 md:py-16">
         <div className="container grid gap-6 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <ContactForm />
@@ -57,8 +50,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <FAQStrip />
 
       <Footer />
       <WhatsAppFab />

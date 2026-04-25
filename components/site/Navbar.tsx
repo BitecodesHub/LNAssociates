@@ -169,7 +169,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "pt-3" : "pt-5"
+        scrolled ? "pt-2 md:pt-3" : "pt-3 md:pt-5"
       )}
       onMouseLeave={handleLeave}
       onMouseEnter={() => { if (closeTimer.current) clearTimeout(closeTimer.current); }}

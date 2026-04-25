@@ -27,18 +27,18 @@ export function FAQStrip() {
   const [open, setOpen] = React.useState<number | null>(0);
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-14 md:py-28">
       <div className="container">
-        <div className="mx-auto mb-10 max-w-2xl text-center">
+        <div className="mx-auto mb-8 max-w-2xl text-center md:mb-10">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
             Before you ask
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-brand-black md:text-4xl text-balance">
+          <h2 className="mt-3 font-display text-2xl font-bold leading-tight text-brand-black sm:text-3xl md:text-4xl text-balance">
             Frequently answered on day one.
           </h2>
         </div>
 
-        <div className="mx-auto max-w-3xl rounded-[28px] border border-black/5 bg-white p-2 shadow-card">
+        <div className="mx-auto max-w-3xl rounded-[20px] border border-black/5 bg-white p-1.5 shadow-card sm:rounded-[28px] sm:p-2">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
@@ -46,9 +46,9 @@ export function FAQStrip() {
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 rounded-2xl px-5 py-5 text-left transition-colors hover:bg-brand-soft"
+                  className="flex w-full items-center justify-between gap-3 rounded-2xl px-4 py-4 text-left transition-colors hover:bg-brand-soft sm:gap-4 sm:px-5 sm:py-5"
                 >
-                  <span className="font-display text-[15.5px] font-bold text-brand-black">
+                  <span className="font-display text-[14px] font-bold text-brand-black sm:text-[15.5px]">
                     {f.q}
                   </span>
                   <motion.span
@@ -69,7 +69,7 @@ export function FAQStrip() {
                       transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="px-5 pb-5 text-[14.5px] leading-relaxed text-brand-muted">
+                      <p className="px-4 pb-4 text-[13.5px] leading-relaxed text-brand-muted sm:px-5 sm:pb-5 sm:text-[14.5px]">
                         {f.a}
                       </p>
                     </motion.div>

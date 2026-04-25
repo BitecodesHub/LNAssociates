@@ -95,23 +95,20 @@ export function ContactForm() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.55 }}
-      className="relative overflow-hidden rounded-[28px] border border-black/5 bg-white p-6 shadow-card md:p-10"
+      className="relative overflow-hidden rounded-[20px] border border-black/5 bg-white p-5 shadow-card sm:rounded-[28px] sm:p-6 md:p-10"
     >
       <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-black/[0.035] blur-3xl" />
 
       <div className="relative">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
-          Tell us about your requirement
-        </p>
-        <h2 className="mt-2 font-display text-2xl font-bold text-brand-black md:text-3xl">
-          Start the conversation
+        <h2 className="font-display text-xl font-bold text-brand-black sm:text-2xl">
+          Send us a message
         </h2>
         <p className="mt-2 max-w-lg text-[14px] leading-relaxed text-brand-muted">
-          A founder will respond personally with next steps and a clear quote.
+          A founder will respond personally with next steps.
         </p>
       </div>
 
-      <div className="relative mt-8 grid gap-5 sm:grid-cols-2">
+      <div className="relative mt-6 grid gap-4 sm:mt-8 sm:gap-5 sm:grid-cols-2">
         <TextField
           label="Full name"
           required
@@ -228,7 +225,7 @@ export function ContactForm() {
           type="submit"
           size="lg"
           disabled={status === "loading"}
-          className="group relative min-w-[180px]"
+          className="group relative w-full sm:w-auto sm:min-w-[180px]"
         >
           <AnimatePresence mode="wait" initial={false}>
             {status === "loading" ? (

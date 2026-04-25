@@ -40,12 +40,12 @@ function Avatar({ src, initials }: { src: string; initials: string }) {
 
   if (!hasError) {
     return (
-      <div className="relative h-[72px] w-[72px] overflow-hidden rounded-full bg-neutral-800">
+      <div className="relative h-[60px] w-[60px] shrink-0 overflow-hidden rounded-full bg-neutral-800 sm:h-[72px] sm:w-[72px]">
         <Image
           src={src}
           alt={initials}
           fill
-          sizes="72px"
+          sizes="(max-width: 640px) 60px, 72px"
           className="object-cover"
           onError={() => setHasError(true)}
         />
@@ -54,8 +54,8 @@ function Avatar({ src, initials }: { src: string; initials: string }) {
   }
 
   return (
-    <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-brand-black">
-      <span className="font-display text-xl font-bold text-white">{initials}</span>
+    <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-brand-black sm:h-[72px] sm:w-[72px]">
+      <span className="font-display text-lg font-bold text-white sm:text-xl">{initials}</span>
     </div>
   );
 }
@@ -64,13 +64,13 @@ export function Founders() {
   return (
     <section
       id="founder"
-      className="relative py-16 md:py-24"
+      className="relative py-14 md:py-24"
       aria-labelledby="founder-title"
     >
       <div className="container">
 
         {/* Header */}
-        <div className="mx-auto mb-12 max-w-2xl text-center">
+        <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-12">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ function FounderCard({
       transition={{ duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] }}
       onMouseMove={spot.onMove}
       onMouseLeave={spot.onLeave}
-      className="group relative overflow-hidden rounded-[28px] border border-black/[0.07] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-red/20 hover:shadow-cardHover md:p-8"
+      className="group relative overflow-hidden rounded-[24px] border border-black/[0.07] bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-red/20 hover:shadow-cardHover sm:rounded-[28px] sm:p-7 md:p-8"
     >
       {/* Spotlight */}
       {spot.coords && (

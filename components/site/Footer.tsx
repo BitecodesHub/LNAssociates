@@ -58,28 +58,28 @@ export function Footer() {
     <footer className="relative mt-10 bg-white">
       {/* CTA strip */}
       <div className="container">
-        <div className="relative overflow-hidden rounded-[32px] bg-brand-red px-8 py-10 text-white md:px-14 md:py-14">
+        <div className="relative overflow-hidden rounded-[20px] bg-brand-red px-5 py-7 text-white sm:rounded-[32px] sm:px-8 sm:py-10 md:px-14 md:py-14">
           <div className="pointer-events-none absolute inset-0 opacity-60 [background:radial-gradient(circle_at_90%_20%,rgba(255,255,255,.3),transparent_45%)]" />
-          <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div className="relative flex flex-col items-start justify-between gap-5 md:flex-row md:items-center md:gap-6">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
                 Get in touch
               </p>
-              <h3 className="mt-2 font-display text-2xl font-bold md:text-4xl text-balance">
+              <h3 className="mt-2 font-display text-xl font-bold sm:text-2xl md:text-4xl text-balance">
                 Ready to simplify your finance stack?
               </h3>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex w-full flex-col gap-2.5 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-3">
               <Link
                 href={`mailto:${CONTACT.email}`}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-brand-red transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-[13px] font-semibold text-brand-red transition-transform hover:-translate-y-0.5 sm:px-5 sm:text-sm"
               >
-                <Mail className="h-4 w-4" />
-                {CONTACT.email}
+                <Mail className="h-4 w-4 shrink-0" />
+                <span className="truncate">{CONTACT.email}</span>
               </Link>
               <Link
                 href={CONTACT.whatsapp.href}
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-3 text-[13px] font-semibold text-white transition-transform hover:-translate-y-0.5 sm:px-5 sm:text-sm"
               >
                 <Phone className="h-4 w-4" />
                 WhatsApp us
@@ -89,8 +89,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container mt-16 grid gap-10 pb-8 md:grid-cols-12">
-        <div className="md:col-span-4">
+      <div className="container mt-10 grid gap-8 pb-8 sm:mt-14 sm:gap-10 sm:grid-cols-2 md:mt-16 md:grid-cols-12">
+        <div className="sm:col-span-2 md:col-span-4">
           <Logo />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-brand-muted">
             A consultancy firm based in Ahmedabad — helping businesses turn

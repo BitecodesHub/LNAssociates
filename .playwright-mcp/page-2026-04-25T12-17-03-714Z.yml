@@ -1,0 +1,404 @@
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - link "LN Associate home" [ref=e7] [cursor=pointer]:
+      - /url: /
+      - img [ref=e9]
+      - generic [ref=e15]:
+        - text: LN Associate
+        - superscript [ref=e16]: ®
+    - button "Toggle menu" [ref=e17] [cursor=pointer]:
+      - img [ref=e18]
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e26]: Trusted since 2016 · 500+ clients served
+      - heading "Your Accounting partner for every stage of growth." [level=1] [ref=e27]:
+        - text: Your
+        - generic [ref=e31]: Accounting
+        - text: partner for every stage of growth.
+      - paragraph [ref=e33]: From company registration and GST to audits, payroll and cross-border advisory — LN Associate is a one-stop consultancy turning compliance into a quiet competitive edge.
+      - generic [ref=e34]:
+        - link "Explore Services" [ref=e35] [cursor=pointer]:
+          - /url: "#services"
+          - text: Explore Services
+          - img [ref=e36]
+        - link "Meet the founders" [ref=e38] [cursor=pointer]:
+          - /url: "#founder"
+          - img [ref=e39]
+          - text: Meet the founders
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - img [ref=e44]
+          - text: Compliance-first approach
+        - generic [ref=e47]:
+          - img [ref=e48]
+          - text: Tailor-made for your business
+        - generic [ref=e50]:
+          - generic [ref=e56]:
+            - img [ref=e57]
+            - text: "4.8"
+          - generic [ref=e59]: · 23 Google reviews
+      - generic [ref=e60]:
+        - paragraph [ref=e61]: Trusted by teams at
+        - generic [ref=e63]:
+          - generic [ref=e64]: PALDI TEXTILES
+          - generic [ref=e65]: SIVANTA GROUP
+          - generic [ref=e66]: GK ASSOCIATES
+          - generic [ref=e67]: RAJPARA EXPORTS
+          - generic [ref=e68]: AHMEDABAD RETAIL
+          - generic [ref=e69]: OM INDUSTRIES
+          - generic [ref=e70]: NOVUS PHARMA
+          - generic [ref=e71]: PALDI TEXTILES
+          - generic [ref=e72]: SIVANTA GROUP
+          - generic [ref=e73]: GK ASSOCIATES
+          - generic [ref=e74]: RAJPARA EXPORTS
+          - generic [ref=e75]: AHMEDABAD RETAIL
+          - generic [ref=e76]: OM INDUSTRIES
+          - generic [ref=e77]: NOVUS PHARMA
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - img "LN Associate financial advisor reviewing compliance reports" [ref=e81]
+        - generic [ref=e85]:
+          - generic [ref=e86]: Partner-led service
+          - paragraph [ref=e88]: Compliance, done with craft.
+        - generic [ref=e89]:
+          - img [ref=e90]:
+            - generic [ref=e91]: TRUSTED SINCE 2016 · LN ASSOCIATE ·
+          - img [ref=e93]
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - img [ref=e99]
+            - generic [ref=e102]: Tax savings YTD
+          - generic [ref=e103]: +12%
+        - generic [ref=e104]: ₹ 4,82,000
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - img [ref=e109]
+          - generic [ref=e112]:
+            - generic [ref=e113]: GST Filing · On track
+            - generic [ref=e114]: Q1 compliance ready
+        - generic [ref=e115]:
+          - generic [ref=e117]:
+            - generic [ref=e118]: GSTR-1
+            - generic [ref=e119]: 100%
+          - generic [ref=e122]:
+            - generic [ref=e123]: GSTR-3B
+            - generic [ref=e124]: 88%
+          - generic [ref=e127]:
+            - generic [ref=e128]: GSTR-9
+            - generic [ref=e129]: 62%
+  - region "Experience you can measure." [ref=e131]:
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - paragraph [ref=e134]: By the numbers
+        - heading "Experience you can measure." [level=2] [ref=e135]:
+          - text: Experience you can
+          - generic [ref=e136]:
+            - text: measure.
+            - img [ref=e137]
+        - paragraph [ref=e139]: A decade of books closed on time, filings filed right, and founders who stayed.
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: "0"
+            - generic [ref=e144]: +
+          - generic [ref=e145]:
+            - paragraph [ref=e146]: Clients Served
+            - paragraph [ref=e147]: Across 14 states & 7 countries
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]: "0.0"
+            - generic [ref=e151]: / 5
+          - generic [ref=e152]:
+            - paragraph [ref=e153]: Google Rating
+            - paragraph [ref=e154]: 50+ verified reviews
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e157]: "0"
+            - generic [ref=e158]: + yrs
+          - generic [ref=e159]:
+            - paragraph [ref=e160]: In Practice
+            - paragraph [ref=e161]: Partner-led since 2016
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - img [ref=e164]
+          - text: 14 States
+        - generic [ref=e167]:
+          - img [ref=e168]
+          - text: 7 Countries
+        - generic [ref=e171]:
+          - img [ref=e172]
+          - text: 10,000+ Filings
+        - generic [ref=e176]:
+          - img [ref=e177]
+          - text: ICAI Certified
+  - region "What we do" [ref=e180]:
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - heading "What we do" [level=2] [ref=e183]
+        - paragraph [ref=e184]: Services tailored to every stage of your business.
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - button "01 Business Registration" [ref=e187] [cursor=pointer]:
+            - generic [ref=e189]:
+              - generic [ref=e190]: "01"
+              - generic [ref=e191]: Business Registration
+          - button "02 Accounting Services" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]:
+              - generic [ref=e194]: "02"
+              - generic [ref=e195]: Accounting Services
+          - button "03 Finance Services" [ref=e196] [cursor=pointer]:
+            - generic [ref=e197]:
+              - generic [ref=e198]: "03"
+              - generic [ref=e199]: Finance Services
+          - button "04 Audit" [ref=e200] [cursor=pointer]:
+            - generic [ref=e201]:
+              - generic [ref=e202]: "04"
+              - generic [ref=e203]: Audit
+        - generic [ref=e205]:
+          - paragraph [ref=e206]: From ₹1,500
+          - heading "Business Registration" [level=3] [ref=e207]
+          - paragraph [ref=e209]: Pvt Ltd, LLP, OPC, MSME, FSSAI, IEC & trademark — we handle every registration so you can launch in days, not months.
+          - link "Get started" [ref=e210] [cursor=pointer]:
+            - /url: /contact
+            - text: Get started
+            - img [ref=e211]
+          - generic: "01"
+  - generic [ref=e215]:
+    - generic [ref=e216]:
+      - paragraph [ref=e217]: About us
+      - paragraph [ref=e218]: A one-stop consultancy, built on reliance.
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - heading "A decade of delivering best-in-class advisory." [level=2] [ref=e222]:
+            - text: A decade of delivering
+            - generic [ref=e223]: best-in-class
+            - text: advisory.
+          - paragraph [ref=e224]: LN Associate is a consultancy firm incorporated in March 2016 — a one-stop solution assisting businesses of every size with tailor-made accounting, tax, audit and payroll services across India and the world.
+        - generic [ref=e226]:
+          - generic [ref=e227]: Compliance-first · Outcome-driven · Always on-time · Partner-led ·
+          - generic [ref=e228]: Compliance-first · Outcome-driven · Always on-time · Partner-led ·
+      - generic [ref=e229]:
+        - generic [ref=e230]:
+          - paragraph [ref=e231]: Founded
+          - paragraph [ref=e232]: "2016"
+          - paragraph [ref=e234]: Incorporated March 2016 — still partner-led, still growing.
+        - generic [ref=e235]:
+          - paragraph [ref=e236]: Our promise
+          - blockquote [ref=e237]: "\"Transforming vision into reality — as your trusted financial partner.\""
+          - paragraph [ref=e239]: LN Associate · Est. 2016
+  - region "Meet the founders driving the practice." [ref=e240]:
+    - generic [ref=e241]:
+      - generic [ref=e242]:
+        - paragraph [ref=e243]: Leadership
+        - heading "Meet the founders driving the practice." [level=2] [ref=e244]
+        - paragraph [ref=e245]: Two highly-experienced professionals — integrated as a single team, obsessed with your outcomes.
+      - generic [ref=e246]:
+        - article [ref=e247]:
+          - generic [ref=e248]:
+            - img "JR" [ref=e250]
+            - generic [ref=e251]:
+              - heading "Jesal Rajpara" [level=3] [ref=e252]
+              - paragraph [ref=e253]: Co-Founder · Partner
+              - paragraph [ref=e254]: In practice since 2008
+          - paragraph [ref=e256]: B.Com (Gujarat University) and CA Intermediate. Previously Audit Manager at G. K. Choksi & Co. with deep expertise in accounting, auditing and taxation.
+          - paragraph [ref=e258]: Numbers tell a story — ours always has a happy ending.
+        - article [ref=e259]:
+          - generic [ref=e260]:
+            - img "DS" [ref=e262]
+            - generic [ref=e263]:
+              - heading "Dhruv Shah" [level=3] [ref=e264]
+              - paragraph [ref=e265]: Co-Founder · Partner
+              - paragraph [ref=e266]: In practice since 2008
+          - paragraph [ref=e268]: B.Com (Gujarat University), CA & CS Intermediate. Previously Senior Audit Executive at G. K. Choksi & Co., bringing rigour to every engagement.
+          - paragraph [ref=e270]: Compliance isn't a chore — it's the scaffolding for growth.
+  - region "The reliance behind every reliable business." [ref=e271]:
+    - generic [ref=e272]:
+      - generic [ref=e273]:
+        - paragraph [ref=e274]: Why LN Associate
+        - paragraph [ref=e275]: We don't just close your books — we help you open new possibilities.
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - heading "The reliance behind every reliable business." [level=2] [ref=e278]
+          - link "Talk to a partner" [ref=e280] [cursor=pointer]:
+            - /url: /contact
+            - text: Talk to a partner
+            - img [ref=e281]
+        - generic [ref=e284]:
+          - generic [ref=e285]:
+            - img [ref=e287]
+            - generic [ref=e290]:
+              - heading "On-time, every time" [level=3] [ref=e291]
+              - paragraph [ref=e292]: Filings, audits and deliverables — we stay ahead of every deadline.
+          - generic [ref=e293]:
+            - img [ref=e295]
+            - generic [ref=e298]:
+              - heading "Confidential by default" [level=3] [ref=e299]
+              - paragraph [ref=e300]: Enterprise-grade processes keep your data and documents secure.
+          - generic [ref=e301]:
+            - img [ref=e303]
+            - generic [ref=e305]:
+              - heading "Human + digital workflow" [level=3] [ref=e306]
+              - paragraph [ref=e307]: We blend expert judgement with modern tooling for fewer errors.
+          - generic [ref=e308]:
+            - img [ref=e310]
+            - generic [ref=e314]:
+              - heading "Partner-led service" [level=3] [ref=e315]
+              - paragraph [ref=e316]: Your engagement is led by a founder — not passed around teams.
+          - generic [ref=e317]:
+            - img [ref=e319]
+            - generic [ref=e322]:
+              - heading "Built for growth" [level=3] [ref=e323]
+              - paragraph [ref=e324]: Our advisory scales from first invoice to first IPO — seamlessly.
+          - generic [ref=e325]:
+            - img [ref=e327]
+            - generic [ref=e329]:
+              - heading "Always reachable" [level=3] [ref=e330]
+              - paragraph [ref=e331]: Phone, email, WhatsApp — real responses from real experts.
+  - generic [ref=e332]:
+    - generic [ref=e335]:
+      - generic [ref=e336]:
+        - paragraph [ref=e337]: Get in touch
+        - heading "Ready to simplify your finance stack?" [level=3] [ref=e338]
+      - generic [ref=e339]:
+        - link "info@lnassociate.com" [ref=e340] [cursor=pointer]:
+          - /url: mailto:info@lnassociate.com
+          - img [ref=e341]
+          - generic [ref=e344]: info@lnassociate.com
+        - link "WhatsApp us" [ref=e345] [cursor=pointer]:
+          - /url: https://wa.me/919898953563
+          - img [ref=e346]
+          - text: WhatsApp us
+    - generic [ref=e348]:
+      - generic [ref=e349]:
+        - link "LN Associate home" [ref=e350] [cursor=pointer]:
+          - /url: /
+          - img [ref=e352]
+          - generic [ref=e357]:
+            - generic [ref=e358]:
+              - text: LN Associate
+              - superscript [ref=e359]: ®
+            - generic [ref=e360]: Your Reliance, Our Assurance
+        - paragraph [ref=e361]: A consultancy firm based in Ahmedabad — helping businesses turn accounting, tax and compliance into a quiet competitive edge.
+        - generic [ref=e362]:
+          - generic [ref=e363]: Partner-led
+          - generic [ref=e364]: 4.8★ Google rating
+          - generic [ref=e365]: Serving India + overseas
+        - generic [ref=e366]:
+          - link [ref=e367] [cursor=pointer]:
+            - /url: https://x.com/AssociateLn
+            - img [ref=e368]
+          - link [ref=e370] [cursor=pointer]:
+            - /url: https://www.facebook.com/share/1Bf4igPsxN/
+            - img [ref=e371]
+          - link [ref=e373] [cursor=pointer]:
+            - /url: https://www.instagram.com/ln_associate
+            - img [ref=e374]
+          - link [ref=e377] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/ln-associate-7392a7184/
+            - img [ref=e378]
+      - generic [ref=e382]:
+        - heading "Accounting" [level=4] [ref=e383]
+        - list [ref=e384]:
+          - listitem [ref=e385]:
+            - link "Accounting & Finalization" [ref=e386] [cursor=pointer]:
+              - /url: /accounting#services
+              - text: Accounting & Finalization
+              - img [ref=e387]
+          - listitem [ref=e390]:
+            - link "Cash Flow" [ref=e391] [cursor=pointer]:
+              - /url: /accounting#services
+              - text: Cash Flow
+              - img [ref=e392]
+          - listitem [ref=e395]:
+            - link "Payroll" [ref=e396] [cursor=pointer]:
+              - /url: /accounting#services
+              - text: Payroll
+              - img [ref=e397]
+          - listitem [ref=e400]:
+            - link "Vendor Payments" [ref=e401] [cursor=pointer]:
+              - /url: /accounting#services
+              - text: Vendor Payments
+              - img [ref=e402]
+      - generic [ref=e405]:
+        - heading "Tax & GST" [level=4] [ref=e406]
+        - list [ref=e407]:
+          - listitem [ref=e408]:
+            - link "GST Filing" [ref=e409] [cursor=pointer]:
+              - /url: /#services
+              - text: GST Filing
+              - img [ref=e410]
+          - listitem [ref=e413]:
+            - link "GST Refund" [ref=e414] [cursor=pointer]:
+              - /url: /#services
+              - text: GST Refund
+              - img [ref=e415]
+          - listitem [ref=e418]:
+            - link "Income Tax" [ref=e419] [cursor=pointer]:
+              - /url: /#services
+              - text: Income Tax
+              - img [ref=e420]
+          - listitem [ref=e423]:
+            - link "TDS Return" [ref=e424] [cursor=pointer]:
+              - /url: /#services
+              - text: TDS Return
+              - img [ref=e425]
+      - generic [ref=e428]:
+        - heading "Finance" [level=4] [ref=e429]
+        - list [ref=e430]:
+          - listitem [ref=e431]:
+            - link "Term Loan" [ref=e432] [cursor=pointer]:
+              - /url: /finance#services
+              - text: Term Loan
+              - img [ref=e433]
+          - listitem [ref=e436]:
+            - link "Working Capital" [ref=e437] [cursor=pointer]:
+              - /url: /finance#services
+              - text: Working Capital
+              - img [ref=e438]
+          - listitem [ref=e441]:
+            - link "Mortgage" [ref=e442] [cursor=pointer]:
+              - /url: /finance#services
+              - text: Mortgage
+              - img [ref=e443]
+          - listitem [ref=e446]:
+            - link "Startup Finance" [ref=e447] [cursor=pointer]:
+              - /url: /finance#services
+              - text: Startup Finance
+              - img [ref=e448]
+      - generic [ref=e451]:
+        - heading "Reach us" [level=4] [ref=e452]
+        - list [ref=e453]:
+          - listitem [ref=e454]:
+            - img [ref=e455]
+            - link "Paldi, Ahmedabad, Gujarat 380007" [ref=e458] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/LN+Associate/@23.013,72.567,17z
+          - listitem [ref=e459]:
+            - img [ref=e460]
+            - link "+91 98989 53563" [ref=e462] [cursor=pointer]:
+              - /url: tel:+919898953563
+          - listitem [ref=e463]:
+            - img [ref=e464]
+            - link "info@lnassociate.com" [ref=e467] [cursor=pointer]:
+              - /url: mailto:info@lnassociate.com
+          - listitem [ref=e468]:
+            - img [ref=e469]
+            - link "+91 90997 81323" [ref=e471] [cursor=pointer]:
+              - /url: tel:+919099781323
+    - generic [ref=e473]:
+      - paragraph [ref=e474]: © 2026 LN Associate. All rights reserved.
+      - generic [ref=e475]:
+        - link "Home" [ref=e476] [cursor=pointer]:
+          - /url: /
+        - link "Services" [ref=e477] [cursor=pointer]:
+          - /url: /#services
+        - link "About" [ref=e478] [cursor=pointer]:
+          - /url: /#about
+        - link "Founders" [ref=e479] [cursor=pointer]:
+          - /url: /#founder
+        - link "Contact" [ref=e480] [cursor=pointer]:
+          - /url: /contact
+  - link "Chat on WhatsApp" [ref=e481] [cursor=pointer]:
+    - /url: https://wa.me/919898953563
+    - img [ref=e484]

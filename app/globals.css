@@ -14,11 +14,26 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-white text-brand-ink font-sans;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Prevent iOS from zooming when focusing form fields */
+  @media (max-width: 640px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
   }
 
   ::selection {
@@ -46,6 +61,25 @@
   .bg-grid {
     background-image: radial-gradient(rgba(10, 10, 10, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
+  }
+  /* "+" pattern — small crosses repeated across the surface */
+  .bg-plus {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'><path d='M22 16v12 M16 22h12' stroke='%230A0A0A' stroke-opacity='0.12' stroke-width='1.25' stroke-linecap='round'/></svg>");
+    background-size: 44px 44px;
+    background-position: 0 0;
+  }
+  .bg-plus-sm {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'><path d='M16 12v8 M12 16h8' stroke='%230A0A0A' stroke-opacity='0.10' stroke-width='1' stroke-linecap='round'/></svg>");
+    background-size: 32px 32px;
+    background-position: 0 0;
+  }
+  .mask-radial-fade {
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 80%);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 80%);
+  }
+  .mask-bottom-fade {
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   }
   .glow-red::before {
     content: "";

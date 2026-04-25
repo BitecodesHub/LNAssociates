@@ -51,63 +51,62 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-16 md:pt-40 md:pb-28"
+      className="relative overflow-hidden pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-40 md:pb-28"
     >
       {/* Layered background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-grid opacity-[0.45]" />
+        {/* "+" grid */}
+        <div className="absolute inset-0 bg-plus mask-radial-fade animate-plusDrift opacity-80" />
+        {/* Soft red wash, top-left */}
         <motion.div
           aria-hidden
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute left-1/2 top-[-180px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-black/[0.04] blur-[140px]"
+          transition={{ duration: 1.2 }}
+          className="absolute -left-32 -top-40 h-[520px] w-[520px] rounded-full bg-brand-red/[0.06] blur-[140px]"
         />
+        {/* Soft cool wash, bottom-right */}
         <motion.div
           aria-hidden
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="absolute right-[-120px] bottom-[-120px] h-[480px] w-[480px] rounded-full bg-black/[0.03] blur-[140px]"
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="absolute right-[-120px] bottom-[-120px] h-[480px] w-[480px] rounded-full bg-black/[0.04] blur-[140px]"
         />
+        {/* Bottom fade so the section blends into next */}
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" />
       </div>
 
-      <div className="container grid items-center gap-8 md:gap-10 lg:grid-cols-12 lg:gap-12">
+      <div className="container grid grid-cols-1 items-center gap-10 sm:gap-12 md:gap-10 lg:grid-cols-12 lg:gap-12">
         {/* ---------------------------- Left column ---------------------------- */}
-        <div className="lg:col-span-6 xl:col-span-6">
+        <div className="min-w-0 lg:col-span-6 xl:col-span-6">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3.5 py-1.5 text-xs font-medium text-brand-ink shadow-sm"
+            className="inline-flex max-w-full items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-1.5 text-[11px] font-medium text-brand-ink shadow-sm sm:px-3.5 sm:text-xs"
           >
-            <span className="relative flex h-2 w-2">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-red opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-red" />
             </span>
-            Trusted since 2016 · 500+ clients served
+            <span className="truncate">Trusted since 2016 · 500+ clients served</span>
           </motion.span>
 
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.05 }}
-            className="mt-6 font-display text-[clamp(2.4rem,5.8vw,4.6rem)] font-extrabold leading-[1.02] tracking-tight text-brand-black text-balance"
+            className="mt-5 font-display text-[clamp(1.75rem,5.5vw,4.6rem)] font-extrabold leading-[1.08] tracking-tight text-brand-black text-balance"
           >
-            Your{" "}
-            <span className="relative inline-flex items-baseline align-baseline">
-              <WordRotator words={ROTATING_WORDS} />
-            </span>
-            <br />
-            partner for every stage of growth.
+            Your <WordRotator words={ROTATING_WORDS} /> partner for every stage of growth.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
-            className="mt-6 max-w-xl text-[17px] leading-relaxed text-brand-muted text-pretty"
+            className="mt-5 max-w-xl text-[15px] leading-relaxed text-brand-muted text-pretty sm:text-[17px]"
           >
             From company registration and GST to audits, payroll and
             cross-border advisory — LN Associate is a one-stop consultancy
@@ -118,7 +117,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.28 }}
-            className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+            className="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
           >
             <Button asChild size="lg" className="w-full sm:w-auto">
               <Link href="#services" className="group">
@@ -139,14 +138,14 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-brand-muted"
+            className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2.5 text-[11.5px] text-brand-muted sm:mt-10 sm:gap-x-5 sm:gap-y-3 sm:text-xs"
           >
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-brand-red" />
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <ShieldCheck className="h-3.5 w-3.5 text-brand-red sm:h-4 sm:w-4" />
               Compliance-first approach
             </div>
-            <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-brand-red" />
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <Sparkles className="h-3.5 w-3.5 text-brand-red sm:h-4 sm:w-4" />
               Tailor-made for your business
             </div>
             <ReviewsPill />
@@ -156,7 +155,7 @@ export function Hero() {
         </div>
 
         {/* --------------------------- Right visual ---------------------------- */}
-        <div className="relative lg:col-span-6 xl:col-span-6">
+        <div className="relative min-w-0 lg:col-span-6 xl:col-span-6">
           <HeroVisual reduce={!!reduce} />
         </div>
       </div>
@@ -177,27 +176,25 @@ function WordRotator({ words }: { words: string[] }) {
   }, [words.length]);
 
   return (
-    <span className="relative inline-flex h-[1.05em] min-w-[6ch] overflow-hidden align-baseline">
-      <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.span
+        key={words[index]}
+        initial={{ y: "0.6em", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: "-0.6em", opacity: 0 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="relative inline-block whitespace-nowrap text-brand-red"
+      >
+        {words[index]}
         <motion.span
-          key={words[index]}
-          initial={{ y: "100%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: "-100%", opacity: 0 }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="relative inline-block text-brand-red"
-        >
-          {words[index]}
-          <motion.span
-            aria-hidden
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="absolute inset-x-0 bottom-1 -z-10 h-[10px] origin-left rounded-full bg-brand-red/20"
-          />
-        </motion.span>
-      </AnimatePresence>
-    </span>
+          aria-hidden
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          className="absolute inset-x-0 bottom-1 -z-10 h-[10px] origin-left rounded-full bg-brand-red/20"
+        />
+      </motion.span>
+    </AnimatePresence>
   );
 }
 
@@ -239,8 +236,8 @@ function ReviewsPill() {
 
 function ClientsMarquee() {
   return (
-    <div className="mt-12 max-w-xl">
-      <p className="text-[10.5px] font-semibold uppercase tracking-[0.22em] text-brand-muted">
+    <div className="mt-8 max-w-xl sm:mt-12">
+      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-muted sm:text-[10.5px]">
         Trusted by teams at
       </p>
       <div className="mask-fade-right mt-3 overflow-hidden">
@@ -294,7 +291,7 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
     <motion.div
       onMouseMove={onMove}
       onMouseLeave={onLeave}
-      className="relative mx-auto aspect-[5/6] w-full max-w-[380px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[520px]"
+      className="relative mx-auto aspect-[4/5] w-full max-w-[300px] sm:aspect-[5/6] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[520px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
@@ -326,13 +323,13 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
         <div className="absolute inset-0 [background:linear-gradient(transparent_31px,rgba(255,255,255,0.05)_32px),linear-gradient(90deg,transparent_31px,rgba(255,255,255,0.05)_32px)] bg-[size:32px_32px] opacity-30" />
 
         {/* bottom label */}
-        <div className="absolute inset-x-6 bottom-6 flex items-end justify-between text-white">
+        <div className="absolute inset-x-4 bottom-4 flex items-end justify-between text-white sm:inset-x-6 sm:bottom-6">
           <div>
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur">
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-white/90 backdrop-blur sm:px-2.5 sm:py-1 sm:text-[10px] sm:tracking-[0.18em]">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
               Partner-led service
             </div>
-            <p className="mt-3 font-display text-lg font-bold leading-tight">
+            <p className="mt-2 font-display text-[15px] font-bold leading-tight sm:mt-3 sm:text-lg">
               Compliance, done with craft.
             </p>
           </div>
@@ -351,14 +348,14 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
         initial={{ opacity: 0, y: 30, scale: 0.92 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute left-0 top-6 w-[200px] rounded-2xl border border-black/5 bg-white p-4 shadow-[0_22px_60px_-25px_rgba(10,10,10,0.3)] sm:top-10 sm:w-[240px] sm:rounded-3xl sm:p-5 md:-left-10"
+        className="absolute -left-3 top-3 w-[160px] rounded-2xl border border-black/5 bg-white/95 p-3 shadow-[0_22px_60px_-25px_rgba(10,10,10,0.3)] backdrop-blur-sm sm:top-10 sm:w-[240px] sm:rounded-3xl sm:p-5 md:-left-10"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-brand-red/10 text-brand-red">
               <TrendingUp className="h-4 w-4" />
             </div>
-            <div className="text-[11px] font-medium text-brand-muted">
+            <div className="text-[10px] font-medium text-brand-muted sm:text-[11px]">
               Tax savings YTD
             </div>
           </div>
@@ -366,7 +363,7 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
             +12%
           </div>
         </div>
-        <div className="mt-2.5 font-display text-2xl font-extrabold text-brand-black">
+        <div className="mt-2 font-display text-lg font-extrabold text-brand-black sm:mt-2.5 sm:text-2xl">
           ₹ 4,82,000
         </div>
         <MiniChart />
@@ -378,7 +375,7 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
         initial={{ opacity: 0, y: 30, scale: 0.92 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute right-0 bottom-10 w-[220px] rounded-2xl border border-black/5 bg-white p-4 shadow-[0_22px_60px_-25px_rgba(10,10,10,0.3)] sm:bottom-14 sm:w-[270px] sm:rounded-3xl sm:p-5 md:-right-10"
+        className="absolute -right-3 bottom-6 w-[170px] rounded-2xl border border-black/5 bg-white/95 p-3 shadow-[0_22px_60px_-25px_rgba(10,10,10,0.3)] backdrop-blur-sm sm:bottom-14 sm:w-[270px] sm:rounded-3xl sm:p-5 md:-right-10"
       >
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-brand-black text-white">
@@ -426,7 +423,7 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
         initial={{ opacity: 0, scale: 0.9, y: 16 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute -bottom-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-2.5 rounded-full border border-black/5 bg-white/95 px-3.5 py-2 text-[11.5px] font-medium text-brand-ink shadow-card backdrop-blur sm:left-8 sm:translate-x-0 md:left-4"
+        className="absolute -bottom-4 left-1/2 hidden -translate-x-1/2 items-center gap-2.5 rounded-full border border-black/5 bg-white/95 px-3.5 py-2 text-[11.5px] font-medium text-brand-ink shadow-card backdrop-blur sm:inline-flex sm:left-8 sm:translate-x-0 md:left-4"
       >
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-red text-white">
           <CheckCircle2 className="h-3.5 w-3.5" />
@@ -443,7 +440,7 @@ function HeroVisual({ reduce }: { reduce: boolean }) {
 
 function SinceBadge() {
   return (
-    <div className="absolute right-5 top-5 flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-md ring-1 ring-white/20">
+    <div className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-md ring-1 ring-white/20 sm:right-5 sm:top-5 sm:h-16 sm:w-16">
       <motion.svg
         viewBox="0 0 100 100"
         className="absolute inset-0 h-full w-full"

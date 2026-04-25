@@ -62,7 +62,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative py-16 md:py-24"
+      className="relative py-14 md:py-24"
       aria-labelledby="services-title"
     >
       <div className="container">
@@ -70,17 +70,17 @@ export function Services() {
         <div className="mx-auto max-w-3xl text-center">
           <h2
             id="services-title"
-            className="font-display text-3xl font-bold tracking-tight text-brand-red md:text-4xl uppercase tracking-[0.1em]"
+            className="font-display text-2xl font-bold uppercase tracking-[0.1em] text-brand-red sm:text-3xl md:text-4xl"
           >
             What we do
           </h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-brand-muted">
+          <p className="mt-3 text-[14px] leading-relaxed text-brand-muted sm:mt-4 sm:text-[15px]">
             Services tailored to every stage of your business.
           </p>
         </div>
 
         {/* Split layout */}
-        <div className="mt-14 flex flex-col gap-0 lg:grid lg:grid-cols-[5fr_1px_7fr]">
+        <div className="mt-10 flex flex-col gap-0 sm:mt-14 lg:grid lg:grid-cols-[5fr_1px_7fr]">
 
           {/* ── Left: numbered list ── */}
           <div className="flex flex-col">
@@ -119,7 +119,7 @@ export function Services() {
                         fontWeight: isActive ? 700 : 400,
                       }}
                       transition={{ duration: 0.25 }}
-                      className="mt-0.5 block font-display text-[1.35rem] leading-snug"
+                      className="mt-0.5 block font-display text-[1.15rem] leading-snug sm:text-[1.35rem]"
                     >
                       {s.title}
                     </motion.span>
@@ -149,22 +149,22 @@ export function Services() {
                 </p>
 
                 {/* Title */}
-                <h3 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-brand-black md:text-5xl lg:text-[3.4rem]">
+                <h3 className="mt-3 font-display text-[1.75rem] font-bold leading-tight tracking-tight text-brand-black sm:mt-4 sm:text-4xl md:text-5xl lg:text-[3.4rem]">
                   {current.title}
                 </h3>
 
                 {/* Red rule */}
-                <div className="mt-6 h-[2px] w-10 rounded-full bg-brand-red" />
+                <div className="mt-4 h-[2px] w-10 rounded-full bg-brand-red sm:mt-6" />
 
                 {/* Description */}
-                <p className="mt-6 max-w-md text-[15.5px] leading-relaxed text-brand-muted">
+                <p className="mt-4 max-w-md text-[14.5px] leading-relaxed text-brand-muted sm:mt-6 sm:text-[15.5px]">
                   {current.desc}
                 </p>
 
                 {/* CTA */}
                 <Link
                   href={current.href}
-                  className="group mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand-black transition-colors duration-200 hover:text-brand-red"
+                  className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-black transition-colors duration-200 hover:text-brand-red sm:mt-8"
                 >
                   Get started
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -173,7 +173,7 @@ export function Services() {
                 {/* Watermark number */}
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute bottom-0 right-0 select-none font-display text-[10rem] font-extrabold leading-none text-black/[0.04] lg:text-[13rem]"
+                  className="pointer-events-none absolute -bottom-2 right-0 select-none font-display text-[5rem] font-extrabold leading-none text-black/[0.04] sm:text-[8rem] md:text-[10rem] lg:text-[13rem]"
                 >
                   {current.num}
                 </div>

@@ -59,14 +59,14 @@ export function About() {
             {...fade(0.05)}
             onMouseMove={mainSpot.onMove}
             onMouseLeave={mainSpot.onLeave}
-            className="group relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-black/[0.07] bg-white p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-red/20 hover:shadow-cardHover md:col-span-7 md:p-10"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] border border-black/[0.07] bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-red/20 hover:shadow-cardHover sm:rounded-[28px] sm:p-8 md:col-span-7 md:p-10"
           >
             {mainSpot.spotlight}
 
             <div className="relative z-10">
               <h2
                 id="about-title"
-                className="font-display text-3xl font-bold leading-[1.1] tracking-tight text-brand-black md:text-[2.4rem] text-balance"
+                className="font-display text-2xl font-bold leading-[1.15] tracking-tight text-brand-black sm:text-3xl md:text-[2.4rem] text-balance"
               >
                 A decade of delivering{" "}
                 <span className="relative inline-block text-brand-red">
@@ -114,13 +114,13 @@ export function About() {
               {...fade(0.08)}
               onMouseMove={foundSpot.onMove}
               onMouseLeave={foundSpot.onLeave}
-              className="relative overflow-hidden rounded-[28px] bg-neutral-800 p-7 transition-all duration-300 hover:-translate-y-1"
+              className="relative overflow-hidden rounded-[24px] bg-neutral-800 p-6 transition-all duration-300 hover:-translate-y-1 sm:rounded-[28px] sm:p-7"
             >
               {foundSpot.spotlight}
               <p className="relative z-10 text-[10px] font-semibold uppercase tracking-[0.28em] text-brand-red">
                 Founded
               </p>
-              <p className="relative z-10 mt-2 font-display text-[2.8rem] font-bold leading-none tracking-tight text-white">
+              <p className="relative z-10 mt-2 font-display text-[2.4rem] font-bold leading-none tracking-tight text-white sm:text-[2.8rem]">
                 2016
               </p>
               <div className="relative z-10 mt-3 h-px w-full bg-white/10" />
@@ -134,7 +134,7 @@ export function About() {
               {...fade(0.14)}
               onMouseMove={promSpot.onMove}
               onMouseLeave={promSpot.onLeave}
-              className="relative flex flex-1 flex-col overflow-hidden rounded-[28px] bg-neutral-800 p-7 transition-all duration-300 hover:-translate-y-1"
+              className="relative flex flex-1 flex-col overflow-hidden rounded-[24px] bg-neutral-800 p-6 transition-all duration-300 hover:-translate-y-1 sm:rounded-[28px] sm:p-7"
             >
               {promSpot.spotlight}
               <p className="relative z-10 text-[10px] font-semibold uppercase tracking-[0.28em] text-brand-red">

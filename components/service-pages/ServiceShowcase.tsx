@@ -87,7 +87,7 @@ export function ServiceShowcase({
     <section className="relative">
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-grid opacity-40" />
+        <div className="absolute inset-0 bg-plus-sm mask-radial-fade opacity-70" />
         <div
           className="absolute -top-40 left-[-10%] h-[520px] w-[520px] rounded-full blur-[150px]"
           style={{ background: `${accent}1F` }}
@@ -139,7 +139,7 @@ export function ServiceShowcase({
       <div className={"container pt-2 md:pt-4 " + (centered ? "text-center" : "")}>
         <h1
           className={
-            "font-display font-extrabold leading-[0.94] tracking-[-0.02em] text-brand-black text-[clamp(2.6rem,7.2vw,6.4rem)] " +
+            "font-display font-extrabold leading-[0.98] tracking-[-0.02em] text-brand-black text-[clamp(1.9rem,7.2vw,6.4rem)] " +
             (centered ? "mx-auto" : "")
           }
         >
@@ -430,8 +430,8 @@ function EditorialShowcase({
   const ActiveIcon = activeItem.icon;
 
   return (
-    <div className="container mt-12 md:mt-16">
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-10">
+    <div className="container mt-8 md:mt-16">
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-10">
         {/* Index list */}
         <ul
           className="relative flex flex-col overflow-hidden rounded-[28px] border border-black/[0.07] bg-white/60 backdrop-blur-sm"
@@ -449,7 +449,7 @@ function EditorialShowcase({
                   onFocus={() => setActive(i)}
                   onClick={() => setActive(i)}
                   aria-pressed={isActive}
-                  className="group relative flex w-full items-center gap-4 px-5 py-5 text-left transition-all duration-300 hover:bg-black/[0.025] md:px-6 md:py-6"
+                  className="group relative flex w-full items-center gap-3 px-4 py-4 text-left transition-all duration-300 hover:bg-black/[0.025] sm:gap-4 sm:px-5 sm:py-5 md:px-6 md:py-6"
                   style={
                     {
                       "--hover-accent": accent,
@@ -504,7 +504,7 @@ function EditorialShowcase({
                       {item.tag}
                     </p>
                     <h3
-                      className="mt-1 font-display text-[17px] font-bold leading-tight tracking-tight transition-colors md:text-[19px]"
+                      className="mt-1 font-display text-[15px] font-bold leading-tight tracking-tight transition-colors sm:text-[17px] md:text-[19px]"
                       style={{
                         color: isActive ? accentDeep : "#0A0A0A",
                       }}
@@ -535,7 +535,7 @@ function EditorialShowcase({
 
         {/* Live preview panel */}
         <div
-          className="relative flex min-h-[420px] flex-col overflow-hidden rounded-[28px] border border-black/[0.07] bg-white md:min-h-[460px]"
+          className="relative flex min-h-[360px] flex-col overflow-hidden rounded-[24px] border border-black/[0.07] bg-white md:min-h-[460px] md:rounded-[28px]"
           onMouseEnter={() => {
             /* keep active */
           }}
@@ -551,7 +551,7 @@ function EditorialShowcase({
           {/* Faint index watermark */}
           <span
             aria-hidden
-            className="pointer-events-none absolute -right-4 -top-10 select-none font-display text-[220px] font-extrabold leading-none tracking-tight opacity-[0.05]"
+            className="pointer-events-none absolute -right-2 -top-6 select-none font-display text-[110px] font-extrabold leading-none tracking-tight opacity-[0.05] md:-right-4 md:-top-10 md:text-[220px]"
             style={{ color: accent }}
           >
             {String(active + 1).padStart(2, "0")}
@@ -564,7 +564,7 @@ function EditorialShowcase({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-              className="relative flex h-full flex-col p-7 md:p-10"
+              className="relative flex h-full flex-col p-5 sm:p-7 md:p-10"
             >
               <div className="flex items-start gap-4">
                 <span
@@ -585,11 +585,11 @@ function EditorialShowcase({
                 </div>
               </div>
 
-              <h2 className="mt-6 font-display text-[28px] font-bold leading-[1.1] tracking-tight text-brand-black md:text-[36px]">
+              <h2 className="mt-5 font-display text-[22px] font-bold leading-[1.15] tracking-tight text-brand-black sm:text-[28px] md:text-[36px]">
                 {activeItem.title}
               </h2>
 
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-black/65">
+              <p className="mt-3 max-w-xl text-[14px] leading-relaxed text-black/65 sm:mt-4 sm:text-[15px]">
                 {activeItem.summary}
               </p>
 

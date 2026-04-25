@@ -27,7 +27,7 @@ export function WhyUs() {
   const [active, setActive] = React.useState<number | null>(null);
 
   return (
-    <section id="why" className="relative overflow-hidden py-16 md:py-24" aria-labelledby="why-title">
+    <section id="why" className="relative overflow-hidden py-14 md:py-24" aria-labelledby="why-title">
       <div className="container">
 
         {/* ── Centered header above card ── */}
@@ -53,21 +53,21 @@ export function WhyUs() {
         </div>
 
         {/* ── Dark card ── */}
-        <div className="relative overflow-hidden rounded-[40px] bg-brand-black">
+        <div className="relative overflow-hidden rounded-[28px] bg-brand-black sm:rounded-[40px]">
 
           {/* Background texture */}
           <div aria-hidden className="pointer-events-none absolute inset-0 [background:radial-gradient(circle_at_15%_60%,rgba(200,16,46,0.09),transparent_50%),radial-gradient(circle_at_85%_20%,rgba(255,255,255,0.03),transparent_50%)]" />
           <div aria-hidden className="pointer-events-none absolute inset-0 [background:linear-gradient(transparent_31px,rgba(255,255,255,0.022)_32px),linear-gradient(90deg,transparent_31px,rgba(255,255,255,0.022)_32px)] bg-[size:32px_32px]" />
 
           {/* Card header */}
-          <div className="relative grid gap-8 px-8 pb-8 pt-10 md:grid-cols-2 md:items-end md:px-12 md:pt-12">
+          <div className="relative grid gap-6 px-6 pb-6 pt-8 sm:gap-8 sm:px-8 sm:pb-8 sm:pt-10 md:grid-cols-2 md:items-end md:px-12 md:pt-12">
             <motion.h2
               id="why-title"
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
-              className="font-display text-3xl font-bold leading-[1.1] text-white md:text-[2.6rem] text-balance"
+              className="font-display text-2xl font-bold leading-[1.15] text-white sm:text-3xl md:text-[2.6rem] text-balance"
             >
               The reliance behind every reliable business.
             </motion.h2>
@@ -90,7 +90,7 @@ export function WhyUs() {
           </div>
 
           {/* Divider */}
-          <div className="mx-8 h-px bg-white/[0.07] md:mx-12" />
+          <div className="mx-6 h-px bg-white/[0.07] sm:mx-8 md:mx-12" />
 
           {/* ── Expanding panels (desktop) ── */}
           <div
@@ -169,7 +169,7 @@ export function WhyUs() {
           </div>
 
           {/* ── Stacked list (mobile) ── */}
-          <div className="relative divide-y divide-white/[0.07] px-8 pb-8 md:hidden">
+          <div className="relative divide-y divide-white/[0.07] px-6 pb-6 sm:px-8 sm:pb-8 md:hidden">
             {REASONS.map((r, i) => (
               <motion.div
                 key={r.title}

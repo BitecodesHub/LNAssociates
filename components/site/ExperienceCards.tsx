@@ -126,14 +126,14 @@ const StatCard = React.memo(function StatCard({
 
 
       {/* Big number */}
-      <div className="relative z-10 mt-5 flex items-baseline gap-1 leading-none">
+      <div className="relative z-10 mt-4 flex items-baseline gap-1 leading-none sm:mt-5">
         <Counter
           inView={inView}
           to={to}
           decimals={decimals}
-          className="font-display text-[2.8rem] font-extrabold tracking-tight text-brand-red tabular-nums"
+          className="font-display text-[2.2rem] font-extrabold tracking-tight text-brand-red tabular-nums sm:text-[2.8rem]"
         />
-        <span className="font-display text-2xl font-bold text-brand-black/50">{suffix}</span>
+        <span className="font-display text-xl font-bold text-brand-black/50 sm:text-2xl">{suffix}</span>
       </div>
 
       {/* Labels */}
@@ -161,13 +161,14 @@ export function ExperienceCards() {
       className="relative overflow-hidden bg-white py-12 md:py-16"
       aria-labelledby="numbers-title"
     >
-      {/* Red dot-grid background */}
+      {/* "+" grid background */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.28]"
+        className="pointer-events-none absolute inset-0 opacity-[0.55]"
         style={{
-          backgroundImage: "radial-gradient(circle, #C8102E 1px, transparent 1px)",
-          backgroundSize: "26px 26px",
+          backgroundImage:
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'><path d='M20 14v12 M14 20h12' stroke='%23C8102E' stroke-opacity='0.35' stroke-width='1.1' stroke-linecap='round'/></svg>\")",
+          backgroundSize: "40px 40px",
         }}
       />
       {/* Fade top & bottom */}
@@ -236,7 +237,7 @@ export function ExperienceCards() {
         </div>
 
         {/* Stat cards */}
-        <div className="mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
+        <div className="mx-auto mt-6 grid max-w-5xl grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-3 sm:gap-4">
           {STATS.map((stat) => (
             <StatCard key={stat.label} {...stat} />
           ))}

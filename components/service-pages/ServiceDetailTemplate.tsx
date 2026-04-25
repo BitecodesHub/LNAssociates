@@ -133,7 +133,7 @@ export function ServiceDetailTemplate({
       {/* Hero */}
       <section className="relative overflow-hidden pt-8 pb-14 md:pt-10 md:pb-20">
         <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-grid opacity-[0.32]" />
+          <div className="absolute inset-0 bg-plus-sm mask-radial-fade opacity-70" />
           <div
             className="absolute right-[-120px] top-12 h-[420px] w-[420px] rounded-full blur-[120px]"
             style={{ background: `${tokens.accent}1F` }}
@@ -164,7 +164,7 @@ export function ServiceDetailTemplate({
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.06 }}
-              className="mt-5 max-w-3xl font-display text-[clamp(2.1rem,4.4vw,3.8rem)] font-extrabold leading-[1.04] tracking-tight text-brand-black text-balance"
+              className="mt-5 max-w-3xl font-display text-[clamp(1.8rem,4.4vw,3.8rem)] font-extrabold leading-[1.08] tracking-tight text-brand-black text-balance"
             >
               {service.hero.headline}
             </motion.h1>
@@ -220,7 +220,7 @@ export function ServiceDetailTemplate({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.16 }}
             className={
-              "relative overflow-hidden rounded-[34px] p-7 md:p-8 lg:col-span-5 " +
+              "relative overflow-hidden rounded-[26px] p-5 sm:rounded-[34px] sm:p-7 md:p-8 lg:col-span-5 " +
               tokens.heroSurfaceText
             }
             style={{
@@ -252,19 +252,19 @@ export function ServiceDetailTemplate({
       </section>
 
       {/* Process */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-16">
         <div className="container">
-          <div className="rounded-[34px] border border-black/5 bg-[#FAFAF7] p-7 md:p-9">
+          <div className="rounded-[24px] border border-black/5 bg-[#FAFAF7] p-5 sm:rounded-[34px] sm:p-7 md:p-9">
             <div className="max-w-2xl">
               <p className={"text-xs font-semibold uppercase tracking-[0.2em] " + tokens.eyebrowText}>
                 How we run it
               </p>
-              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-brand-black md:text-4xl text-balance">
+              <h2 className="mt-3 font-display text-[22px] font-bold leading-tight tracking-tight text-brand-black sm:text-2xl md:text-4xl text-balance">
                 A clean rhythm — from first review to ongoing delivery.
               </h2>
             </div>
 
-            <div className="mt-7 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               {service.process.map((step, index) => (
                 <motion.div
                   key={step.title}
@@ -407,7 +407,7 @@ export function ServiceDetailTemplate({
       <section className="py-12 md:py-16">
         <div className="container">
           <div
-            className="relative overflow-hidden rounded-[34px] px-7 py-9 text-white md:px-10 md:py-12"
+            className="relative overflow-hidden rounded-[24px] px-5 py-8 text-white sm:rounded-[34px] sm:px-7 sm:py-9 md:px-10 md:py-12"
             style={{
               background: `linear-gradient(135deg, ${tokens.accent} 0%, ${tokens.accentDeep} 100%)`,
             }}
@@ -419,7 +419,7 @@ export function ServiceDetailTemplate({
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
                   {service.cta.eyebrow}
                 </p>
-                <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl text-balance">
+                <h2 className="mt-3 font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-4xl text-balance">
                   {service.cta.title}
                 </h2>
                 <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/82">
